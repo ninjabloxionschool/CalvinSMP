@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSMP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- SPLASH SCREEN -->
+<div id="splash">
+  <img src="logo.png" class="logo">
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+</div>
+
+<!-- APPLICATION -->
+<div id="app" class="hidden">
+
+<header>
+  <button id="menuBtn">☰</button>
+  <img src="logo.png" class="logo small">
+</header>
+
+<nav id="menu" class="hidden">
+  <p onclick="changePage('home')">Accueil</p>
+  <p onclick="changePage('play')">Jouer</p>
+  <p onclick="changePage('address')">Adresse du serveur</p>
+  <p onclick="changePage('players')">Joueurs en ligne</p>
+</nav>
+
+<main>
+
+<!-- ACCUEIL -->
+<section id="home" class="page">
+  <div id="status" class="offline">
+    <span class="dot"></span>
+    <span id="statusText">Hors ligne</span>
+  </div>
+
+  <p class="server">node1.snxhosting.fr:7790</p>
+  <p id="playerCount">Joueurs en ligne : 0</p>
+</section>
+
+<!-- JOUER -->
+<section id="play" class="page hidden">
+  <button class="play-btn" onclick="play()">JOUER</button>
+</section>
+
+<!-- ADRESSE -->
+<section id="address" class="page hidden">
+  <p class="server clickable" onclick="copyIP()">node1.snxhosting.fr:7790</p>
+  <div id="toast">Copié !</div>
+</section>
+
+<!-- JOUEURS -->
+<section id="players" class="page hidden">
+  <ul id="playersList"></ul>
+</section>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
