@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #0d0d0d;
+  color: white;
+  text-align: center;
+}
+
+
+.hidden { display: none; }
+
+/* SPLASH */
+#splash {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 20px;
+}
+
+.logo.small {
+  width: 40px;
+}
+
+.progress {
+  width: 60%;
+  height: 8px;
+  background: #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: #4caf50;
+  animation: load 2s linear forwards;
+}
+
+@keyframes load {
+  to { width: 100%; }
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background: #111;
+  position: relative;
+}
+
+#menuBtn {
+  position: absolute;
+  left: 15px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+}
+
+/* MENU */
+nav {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #1a1a1a;
+  padding: 20px;
+}
+
+nav p {
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+}
+
+/* PAGES */
+.page {
+  padding: 20px;
+}
+
+.server {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.clickable { cursor: pointer; }
+
+/* STATUS */
+#status {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.online .dot { background: #00ff00; }
+.offline .dot { background: red; }
+
+/* PLAY */
+.play-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 40px;
+  font-size: 18px;
+}
+
+/* TOAST */
+#toast {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: none;
+}
+
+/* PLAYERS */
+#playersList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#playersList img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
