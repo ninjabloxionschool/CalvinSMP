@@ -1,0 +1,16 @@
+{
+  "name": "CSMP",
+  "short_name": "CSMP",
+  "start_url": "/CalvinSMP/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
